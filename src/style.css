@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Press+Start+2P&display=swap');
+
+*{
+ margin:0;
+ padding:0;
+ 
+ box-sizing: border-box;
+}
+
+body{
+background:url(./images/1810.jpg);
+background-repeat:repeat;
+background-size: cover;
+}
+
+header{
+padding-right: 70px;
+padding-top: 30px;
+padding-left: 400px;
+display: center;
+}
+
+.containerGrid{
+    
+  display: grid;
+  grid-template-columns: repeat(6,120px);
+  grid-template-rows: repeat(3,140px);
+  grid-gap:20px;
+  justify-content: center;
+  display: none;
+ }
+
+ .card{
+    background:#F4F6F7;
+    margin:30px;
+    width:120px;
+    height:140px;
+    text-align:center;
+    padding:20px;
+    border-radius:6px;
+    box-shadow: 0 4px 8px 0 #0c0d0dbd;
+
+}
+
+.card-front-img{
+    display: block;
+    background-repeat: no-repeat;
+    background-size:130px;
+      margin-top: -30px;
+    padding-top: 35px;
+    margin-left: -10px;
+    }
+
+    
+    
+
+.button-play, .help {
+margin-top: 6px;
+background: #FFCD00;
+padding: 12px;
+text-align: center;
+border: #356ABC 5px solid;
+border-radius: 3px;
+cursor: pointer;
+padding: 13px 0 13px 15px;
+width: 100%;
+font-weight:bold;
+color:#356ABC;
+font-size: 16px;
+font-family: "Montserrat Alternates";
+font-size: 20px;
+font-style: bold;
+}
+
