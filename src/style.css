@@ -20,55 +20,97 @@ padding-left: 400px;
 display: center;
 }
 
-.containerGrid{
-    
+.blockOne{
+display:block;
+}
+
+.button{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+}
+.button-play, .help {
+  margin-top: 6px;
+  background: #FFCD00;
+  padding: 12px;
+  text-align: center;
+  border: #356ABC 5px solid;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 13px 0 13px 15px;
+  height: 3%;
+  width: 15%;
+  font-weight:bold;
+  color:#356ABC;
+  font-family: "Montserrat Alternates";
+  font-size: 25px;
+  font-style: bold;
+  }
+
+
+
+.game-Board{   
   display: grid;
   grid-template-columns: repeat(6,120px);
   grid-template-rows: repeat(3,140px);
   grid-gap:20px;
   justify-content: center;
-  display: none;
+  /*display: none;*/
  }
 
- .card{
-    background:#F4F6F7;
-    margin:30px;
-    width:120px;
-    height:140px;
-    text-align:center;
-    padding:20px;
-    border-radius:6px;
-    box-shadow: 0 4px 8px 0 #0c0d0dbd;
+ /*.container{  Pertenece a códico ATOM
+  width:90%
+  height:90%;
+   background:url(./image/1813.jpg);
+   margin: 90px auto;
+   display:flex;
+   flex-wrap:wrap;
+    justify-content:center;
+    align-content:center;
+}*/
+
+.card{
+  background:#F4F6F7;
+  margin:30px;
+  width:120px;
+  height:140px;
+  text-align:center;
+  padding:20px;
+  border-radius:6px;
+  box-shadow: 0 4px 8px 0 #0c0d0dbd;
+  transition: transform 0.8s;
+  transform-style:preserve-3d;
+  cursor: pointer;
 
 }
 
-.card-front-img{
-    display: block;
-    background-repeat: no-repeat;
-    background-size:130px;
-      margin-top: -30px;
-    padding-top: 35px;
-    margin-left: -10px;
-    }
-
-    
-    
-
-.button-play, .help {
-margin-top: 6px;
-background: #FFCD00;
-padding: 12px;
-text-align: center;
-border: #356ABC 5px solid;
-border-radius: 3px;
-cursor: pointer;
-padding: 13px 0 13px 15px;
-width: 100%;
-font-weight:bold;
-color:#356ABC;
-font-size: 16px;
-font-family: "Montserrat Alternates";
-font-size: 20px;
-font-style: bold;
+.img-front{
+  -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   display: block;
+   background-repeat: no-repeat;
+   background-size:130px;
+   margin-top: -30px;
+   padding-top: 35px;
+   margin-left: -10px;
 }
+
+.is-flipped {                  /*nuevo*/
+  transform: rotateY(180deg);
+}
+
+.img-back{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: block;
+  background-size:100px;
+  margin-top: -105px;
+  margin-right: 100px;
+  margin-left: -20px;
+ 
+ }
+
+    
+
 
