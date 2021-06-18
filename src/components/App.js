@@ -43,38 +43,65 @@ function shuffle(array){
 
   listPokemon = shuffle(listPokemon);
     console.log(listPokemon);
+ 
     
-    
-  let gameBoard = document.createElement("div");
-  gameBoard.className ="game-Board";
+  
   
   const App = () => {
+//------Información de la jugada-----//
+let blockTwo = document.createElement("div");
+blockTwo.className = "blockTwo";
+let information = document.createElement("div");
+information.className = "information";
+let infTime = document.createElement("div");
+infTime.className = "inf";
+let infCheck = document.createElement("div");
+infCheck.className = "inf";
+let infMoving = document.createElement("div");
+infMoving.className = "inf";
+information.appendChild(infTime);
+information.appendChild(infCheck);
+information.appendChild(infMoving);
+blockTwo.appendChild(information);
+
+
+//------tablero de juego------//
+    let gameBoard = document.createElement("div");
+    gameBoard.className ="game-Board";
     for (let i=0; i<listPokemon.length; i++){
        let card = document.createElement("div");
        card.className ="card";
        let imgFront = document.createElement("img");
        imgFront.src = "./images/ball.jpg";
        imgFront.className = "img-front";
-       //imgFront.id =
-      imgFront.addEventListener("click", ()=>{
+       card.appendChild(imgFront);
+      /*imgFront.addEventListener("click", ()=>{
         let img = listPokemon[i].image;
         let imgBack = document.createElement("img");
          imgBack.setAttribute("class","img-back");
          imgBack.setAttribute("src",img);
-         card.classList.toggle('is-flipped');
          card.appendChild(imgBack);
 
-      });
-
-       card.appendChild(imgFront);
+      });*/
        gameBoard.appendChild(card);
-
-
+      
 
     }
-  
 
-  return gameBoard;
+    blockTwo.appendChild(gameBoard);
+//-------------------Salida de juego----------------------------//
+
+let exitGame = document.createElement("div");
+exitGame.className ="information";
+let help = document.createElement("div");
+help.className="inf";
+let home = document.createElement("div");
+home.className="inf";
+exitGame.appendChild(help);
+exitGame.appendChild(home);
+blockTwo.appendChild(exitGame);
+
+  return blockTwo;
 }
 
 
