@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Press+Start+2P&display=swap');
+
+*{
+ 
+
+ 
+ box-sizing: border-box;
+}
+
+body{
+background:url(./images/455-degradados.png);
+background-repeat:repeat;
+background-size: cover;
+}
+
+header{
+padding-right: 70px;
+padding-top: 30px;
+padding-left: 400px;
+display: center;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+
+
+.button{
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+}
+.button-play, .help {
+  margin-top: 6px;
+  background: #FFCD00;
+  padding: 12px;
+  text-align: center;
+  border: #356ABC 5px solid;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 13px 0 13px 15px;
+  height: 3%;
+  width: 15%;
+  font-weight:bold;
+  color:#356ABC;
+  font-family: "Montserrat Alternates";
+  font-size: 25px;
+  font-style: bold;
+  }
+
+.blockTwo{
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+  
+
+  
+}
+
+.game-Board{   
+  background: #F4F6F7;
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin-top: 15px;
+  /*background: #F4F6F7;*/
+
+  
+ }
+
+ /*.container{  Pertenece a códico ATOM
+  width:90%
+  height:90%;
+   background:url(./image/1813.jpg);
+   margin: 90px auto;
+   display:flex;
+   flex-wrap:wrap;
+    justify-content:center;
+    align-content:center;
+}*/
+
+.card{
+  background: #F4F6F7;
+  margin: 8px;
+  width: 120px;
+  height: 140px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 #0c0d0dbd;
+  cursor: pointer;
+
+}
+
+.img-front{
+  
+   display: block;
+   background-repeat: no-repeat;
+   background-size:130px;
+   margin-top: -30px;
+   padding-top: 35px;
+   margin-left: -10px;
+   
+}
+
+.is-flipped {                  /*nuevo*/
+  transform: rotateY(180deg);
+}
+
+.img-back{
+  
+  display: block;
+  background-size:100px;
+  margin-top: -105px;
+  margin-right: 100px;
+  margin-left: -20px;
+ 
+ }
+
+    
+.information{
+  margin-top: 40px;
+  /*margin-left: 100px;*/
+  margin-bottom: 15px;
+  padding: 15px;
+  /* box-sizing: border-box; */
+  background-color: rgb(255, 255, 255,.3);
+  border-radius: 100px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+
+}
+
+.inf {
+  background-color: #F4F6F7;
+  width: 20%;
+  height: 30px;
+ 
+}
+
