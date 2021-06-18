@@ -1,74 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Press+Start+2P&display=swap");
 
-*{
- margin:0;
- padding:0;
- 
- box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-background:url(./images/1810.jpg);
-background-repeat:repeat;
-background-size: cover;
+body {
+  background: url(./images/1810.jpg);
+  background-repeat: repeat;
+  background-size: cover;
 }
 
-header{
-padding-right: 70px;
-padding-top: 30px;
-padding-left: 400px;
-display: center;
+header {
+  padding-right: 70px;
+  padding-top: 30px;
+  /* padding-left: 400px; Esto no deja centrar la img*/
+  display: center;
 }
 
-.containerGrid{
-    
-  display: grid;
-  grid-template-columns: repeat(6,120px);
-  grid-template-rows: repeat(3,140px);
-  grid-gap:20px;
+.logoPrincipal {
+  text-align: center;
+  padding: 40px;
+  width: 80%;
+  max-width: 1000px;
+}
+/* clase padre para flex */
+.containerGame {
+  width: 90%;
+  /* max-width: 1200px; */
+  display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
-  display: none;
- }
-
- .card{
-    background:#F4F6F7;
-    margin:30px;
-    width:120px;
-    height:140px;
-    text-align:center;
-    padding:20px;
-    border-radius:6px;
-    box-shadow: 0 4px 8px 0 #0c0d0dbd;
-
+  margin: 0 auto;
 }
 
-.card-front-img{
-    display: block;
-    background-repeat: no-repeat;
-    background-size:130px;
-      margin-top: -30px;
-    padding-top: 35px;
-    margin-left: -10px;
-    }
+/* clase hijo flex */
+.box {
+  width: 40%;
+  /* border: 1px solid red; */
 
-    
-    
+}
+#img1{
+   width: 100%;
+} 
 
-.button-play, .help {
-margin-top: 6px;
-background: #FFCD00;
-padding: 12px;
-text-align: center;
-border: #356ABC 5px solid;
-border-radius: 3px;
-cursor: pointer;
-padding: 13px 0 13px 15px;
-width: 100%;
-font-weight:bold;
-color:#356ABC;
-font-size: 16px;
-font-family: "Montserrat Alternates";
-font-size: 20px;
-font-style: bold;
+#img2{
+  width: 100%;
+}
+.contenedorButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* align-items: sirve para alinear y se adapta a cualquier dispositivo */
 }
 
+.button-play,
+.help {
+  margin-top: 30px;
+  background: #ffcd00;
+  text-align: center;
+  border: #356abc 10px solid;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 30px 0 30px 15px;
+  width: 300px;
+  max-width: 350px;
+  font-weight: bold;
+  color: #356abc;
+  font-size: 16px;
+  font-family: "Montserrat Alternates";
+  font-size: 30px;
+  font-style: bold;
+}
+
+.container {
+  width: 90%;
+  height: 90%;
+  margin: 90px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.card {
+  background: #f4f6f7;
+  margin: 30px;
+  width: 120px;
+  height: 140px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 #0c0d0dbd;
+}
+
+.card-front-img {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 130px;
+  margin-top: -30px;
+  padding-top: 35px;
+  margin-left: -10px;
+}
+
+.card-back-img {
+  display: block;
+  background-size: 100px;
+  margin-top: -8px;
+  margin-right: 100px;
+  margin-left: -20px;
+}
+
+.copyright{
+  position: fixed;
+  width: 100%;
+  background: #356abc;
+  color: #fff;
+  text-align: center;
+  bottom: 0px;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+
+/* ______________ responsive ______________________________ */
+
+/* Mobile view */
+@media only screen and (max-width: 430px) {
+  .logoPrincipal {
+    justify-content: center;
+    position: center;
+    display: flex;
+    margin: auto;
+  }
+
+  #img1, #img2{
+     display: none;
+
+  }
+}
