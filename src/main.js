@@ -1,18 +1,11 @@
 import App from './components/App.js';
-// en este doc se trabaja la interactividad
 
-// declaración botones del primer bloque
-let btnPlay=  document.getElementById("buttonPlay");
-let btnHelp= document.getElementById("help");
+blockTwo.style.display ="none";
 
-document.getElementById("blockTwo").style.display = "none";
+document.getElementById('buttonPlay').addEventListener("click", ()=>{
+    blockOne.style.display = "none";
+    blockTwo.style.display = "block";
 
-btnPlay.addEventListener("click", () => {
-// aqui se esta llamando al metodo gamePlay del archivo app.js  
-  App.gamePlay();
+});
 
-    document.getElementById("blockTwo").style.display = "block";
-    document.getElementById("blockOne").style.display = "none";
-  
-  });
-
+document.getElementById("blockTwo").appendChild(App());
