@@ -1,72 +1,104 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Press+Start+2P&display=swap");
 
-*{
- 
-
- 
- box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-background:url(./assets/images/fondoPrincipal.png);
-background-repeat:repeat;
-background-size: cover;
+body {
+  background: url(./assets/images/fondoPrincipal.png);
+  background-repeat:repeat;
+  background-size: cover;
 }
 
-header {
-  padding-right: 70px;
-  padding-top: 30px;
-  /* padding-left: 400px; Esto no deja centrar la img*/
-  display: center;
-}
-
-.container{
+.container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
 }
 
-
-
-.button{
+header {
   display: flex;
-  flex-direction:column;
-  justify-content: space-around;
-}
-.button-play, .help {
-  margin-top: 6px;
-  background: #FFCD00;
-  padding: 12px;
-  text-align: center;
-  border: #356ABC 5px solid;
-  border-radius: 6px;
-  cursor: pointer;
-  padding: 13px 0 13px 15px;
-  height: 3%;
-  width: 15%;
-  font-weight:bold;
-  color:#356ABC;
-  font-family: "Montserrat Alternates";
-  font-size: 25px;
-  font-style: bold;
-  }
+  justify-content: center;
+  padding-top: 40px;
 
-.blockTwo{
+} 
+
+.boxHeader {
+  border: #ff009d 1px solid;
+  padding:10px;
+
+} 
+
+
+/* .logoPrincipal {
+
+} */
+
+
+.initiaContainer{
+  width: 90%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+.box {
+  width: 40%;
+  border: 1px solid red; 
+
+}
+
+.imgIvysaur,  .imgPicachu{
   width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    padding-left: 15%;
-    padding-right: 15%;
-  
-
-  
 }
 
-.game-Board{   
-  background: #F4F6F7;
+
+/* Contenedor de los botones */
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button-play,
+.help {
+  margin-top: 30px;
+  background: #ffcd00;
+  text-align: center;
+  border: #356abc 10px solid;
+  border-radius: 25px;
+  cursor: pointer;
+  padding: 30px 0 30px 15px;
+  width: 300px;
+  max-width: 350px;
+  font-weight: bold;
+  color: #356abc;
+  font-size: 16px;
+  font-family: "Montserrat Alternates";
+  font-size: 30px;
+  font-style: bold;
+  /* box-shadow: -3px -3px 7px #fff;
+  3px 3px 5px rgb(94, 104, 121, 0.7); */
+}
+
+
+.blockTwo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.game-Board {
+  /* background: #f4f6f7; */
   width: 100%;
   max-width: 1500px;
   height: auto;
@@ -77,11 +109,9 @@ header {
   justify-content: center;
   margin-top: 15px;
   /*background: #F4F6F7;*/
+}
 
-  
- }
-
- /*.container{  Pertenece a códico ATOM
+/*.container{  Pertenece a códico ATOM
   width:90%
   height:90%;
    background:url(./image/1813.jpg);
@@ -92,8 +122,8 @@ header {
     align-content:center;
 }*/
 
-.card{
-  background: #F4F6F7;
+.card {
+  background: #f4f6f7;
   margin: 8px;
   width: 120px;
   height: 140px;
@@ -112,39 +142,35 @@ header {
   margin-left: -20px;
 }
 
-.img-front{
-  
-   display: block;
-   background-repeat: no-repeat;
-   background-size:130px;
-   margin-top: -30px;
-   padding-top: 35px;
-   margin-left: -10px;
-   
+.img-front {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 130px;
+  margin-top: -30px;
+  padding-top: 35px;
+  margin-left: -10px;
 }
 
-.is-flipped {                  /*nuevo*/
+.is-flipped {
+  /*nuevo*/
   transform: rotateY(180deg);
 }
 
-.img-back{
-  
+.img-back {
   display: block;
-  background-size:100px;
+  background-size: 100px;
   margin-top: -105px;
   margin-right: 100px;
   margin-left: -20px;
- 
- }
+}
 
-    
-.information{
+.information {
   margin-top: 40px;
   /*margin-left: 100px;*/
   margin-bottom: 15px;
   padding: 15px;
   /* box-sizing: border-box; */
-  background-color: rgb(255, 255, 255,.3);
+  background-color: rgb(255, 255, 255, 0.3);
   border-radius: 100px;
   width: 100%;
   height: 70px;
@@ -153,22 +179,30 @@ header {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-
-
 }
 
 .inf {
-  background-color: #F4F6F7;
+  background-color: #f4f6f7;
   width: 20%;
   height: 30px;
- 
 }
 
+/* footer */
+.copyright {
+  position: fixed;
+  width: 100%;
+  background: #356abc;
+  color: #fff;
+  text-align: center;
+  bottom: 0px;
+  padding: 20px 0;
+  font-size: 20px;
+}
 
-/* ______________ responsive ______________________________ */
+/* _________________________ responsive ______________________________ */
 
 /* Mobile view */
-@media only screen and (max-width: 430px) {
+ @media only screen and (max-width: 430px) {
   .logoPrincipal {
     justify-content: center;
     position: center;
@@ -176,8 +210,7 @@ header {
     margin: auto;
   }
 
-  #img1, #img2{
-     display: none;
-
+.imgIvysaur,  .imgPicachu{
+    display: none;
   }
-}
+} 
