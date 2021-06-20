@@ -72,7 +72,7 @@ blockTwo.appendChild(information);
        let card = document.createElement("div");
        card.className ="card";
        let imgFront = document.createElement("img");
-       imgFront.src = "./images/ball.jpg";
+       imgFront.src = "./assets/images/ball.jpg";
        imgFront.className = "img-front";
        card.appendChild(imgFront);
       /*imgFront.addEventListener("click", ()=>{
