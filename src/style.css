@@ -87,18 +87,21 @@ header {
 }
 
 
-.blockTwo {
+.blockTwo{
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  padding-left: 15%;
-  padding-right: 15%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+  
+
+  
 }
 
-.game-Board {
-  /* background: #f4f6f7; */
+.game-Board{   
+  
   width: 100%;
   max-width: 1500px;
   height: auto;
@@ -109,9 +112,11 @@ header {
   justify-content: center;
   margin-top: 15px;
   /*background: #F4F6F7;*/
-}
 
-/*.container{  Pertenece a códico ATOM
+  
+ }
+
+ /*.container{  Pertenece a códico ATOM
   width:90%
   height:90%;
    background:url(./image/1813.jpg);
@@ -122,8 +127,8 @@ header {
     align-content:center;
 }*/
 
-.card {
-  background: #f4f6f7;
+.card{
+  background: #F4F6F7;
   margin: 8px;
   width: 120px;
   height: 140px;
@@ -132,45 +137,50 @@ header {
   border-radius: 6px;
   box-shadow: 0 4px 8px 0 #0c0d0dbd;
   cursor: pointer;
+  transition: transform 0.8s;
+  transform-style:preserve-3d;
 }
 
-.card-back-img {
+.card-equal{
+  margin: 8px;
+  width: 120px;
+  height: 140px;
+}
+
+.img-front{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+   display: block;
+   background-repeat: no-repeat;
+   background-size:130px;
+   margin-top: -30px;
+   padding-top: 35px;
+   margin-left: -10px;
+   
+}
+
+
+
+.img-back{
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+transform: rotateY(180deg);
   display: block;
-  background-size: 100px;
-  margin-top: -8px;
-  margin-right: 100px;
-  margin-left: -20px;
-}
-
-.img-front {
-  display: block;
-  background-repeat: no-repeat;
-  background-size: 130px;
-  margin-top: -30px;
-  padding-top: 35px;
-  margin-left: -10px;
-}
-
-.is-flipped {
-  /*nuevo*/
-  transform: rotateY(180deg);
-}
-
-.img-back {
-  display: block;
-  background-size: 100px;
+  background-size:100px;
   margin-top: -105px;
   margin-right: 100px;
   margin-left: -20px;
-}
+ 
+ }
 
-.information {
+    
+.information{
   margin-top: 40px;
   /*margin-left: 100px;*/
   margin-bottom: 15px;
   padding: 15px;
   /* box-sizing: border-box; */
-  background-color: rgb(255, 255, 255, 0.3);
+  background-color: rgb(255, 255, 255,.3);
   border-radius: 100px;
   width: 100%;
   height: 70px;
@@ -179,38 +189,68 @@ header {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
+
+
 }
+
+
+
 
 .inf {
-  background-color: #f4f6f7;
-  width: 20%;
+  background-color: #F4F6F7;
+  width: 50px;
   height: 30px;
+  border-radius: 3px;
+ 
 }
 
-/* footer */
-.copyright {
-  position: fixed;
-  width: 100%;
-  background: #356abc;
-  color: #fff;
-  text-align: center;
-  bottom: 0px;
-  padding: 20px 0;
+.dad{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.fa-magic{
+margin-bottom: 5px;
+font-size:20px;
+}
+
+.infoMoving{
+  background-color: #F4F6F7;
+  width: 50px;
+  height: auto;
+  border-radius: 3px;
+  padding: 5px;
+
+}
+
+.fa-check{
+  font-size:20px;
+}
+
+.infCheck{
   font-size: 20px;
+  background: #F4F6F7;;
+  color: #111;
+  border-radius: 4px;
 }
-
 /* _________________________ responsive ______________________________ */
 
 /* Mobile view */
  @media only screen and (max-width: 430px) {
-  .logoPrincipal {
+  /*.logoPrincipal {
     justify-content: center;
     position: center;
     display: flex;
     margin: auto;
-  }
+  }*/
 
 .imgIvysaur,  .imgPicachu{
     display: none;
   }
 } 
+  
+
+
