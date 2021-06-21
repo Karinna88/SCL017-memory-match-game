@@ -53,11 +53,21 @@ let blockTwo = document.createElement("div");
 blockTwo.className = "blockTwo";
 let information = document.createElement("div");
 information.className = "information";
-let infTime = document.createElement("div");
-infTime.className = "inf";
-let infoTime = document.createElement("p");
-infoTime.id="infoTime";
-infTime.appendChild(infoTime);
+//____________________________________________
+
+let dadinfTime = document.createElement("div");
+dadinfTime.className = "dadinfTime";
+let iconTime = document.createElement("span");
+iconTime.className="fas fa-hourglass-half";
+let infTime = document.createElement("span");
+infTime.className = "infTime";
+infTime.id = "infoTime";
+let textTime =document.createTextNode("00:00");
+infTime.appendChild(textTime);
+
+dadinfTime.appendChild(iconTime);
+dadinfTime.appendChild(infTime);
+information.appendChild(dadinfTime);
 //___________________________________
 let dadinfCheck = document.createElement("div");
 dadinfCheck.className="dadinfCheck";
@@ -67,34 +77,31 @@ iconCheck.className="fas fa-check";
 let infCheck = document.createElement("span");
 infCheck.className = "infCheck";
 infCheck.id = "infoCheck";
-let textCheck =document.createTextNode("Cartas encontradas:0");
+let textCheck =document.createTextNode("Encontradas:0");
 infCheck.appendChild(textCheck);
 
 dadinfCheck.appendChild(iconCheck);
 dadinfCheck.appendChild(infCheck);
 information.appendChild(dadinfCheck);
-
-//______________________________
-//_______________________________
+//__________________________________________
 let dadinfMoving = document.createElement("div");
-dadinfMoving.className="dad";
+dadinfMoving.className="dadinfCheck";
 
-let  iconMoving =document.createElement("i");
+let  iconMoving =document.createElement("span");
 iconMoving.className = "fas fa-magic";
-
-let infMoving = document.createElement("div");
-infMoving.className = "infoMoving";
-let infoMoving = document.createElement("p");
-infoMoving.id="infoMoving";
-infMoving.appendChild(infoMoving);
+let infMoving = document.createElement("span");
+infMoving.className = "infMoving";
+let textMoving = document.createTextNode("Movimientos:0");
+infMoving.appendChild(textMoving);
+infMoving.id="infoMoving";
+infMoving.appendChild(textMoving);
 
 dadinfMoving.appendChild(iconMoving);
 dadinfMoving.appendChild(infMoving);
 information.appendChild(dadinfMoving);
-//____________________________
-information.appendChild(infTime);
 
-//information.appendChild(infMoving);
+//__________________________________
+
 blockTwo.appendChild(information);
 
 
@@ -107,12 +114,12 @@ blockTwo.appendChild(information);
 
     //---------------Nuevas variables------------------
     let cartasVoltedas =0;
-    let cartaOne ="";
-    let cartaTwo ="";
+    let cartaOne;
+    let cartaTwo;
     let cartasEncontradas=0;
     let tiempo =0;
     let intentos=0;
-   let temporizador;
+   let temporizador=0;
    //let iniciar=0;
     //-----------------------------------------------
     let cartaElegida =[];
@@ -129,8 +136,12 @@ blockTwo.appendChild(information);
 
        imgFront.className = "img-front";
        //let imgFrontImage = listPokemon[i].image;
+
+
        
        card.appendChild(imgFront);
+
+       
        let chequeo=document.getElementsByClassName("card");
       imgFront.addEventListener("click", (e)=>{
          timer();
@@ -142,7 +153,8 @@ blockTwo.appendChild(information);
         imgBack.id = imagenId;
          imgBack.setAttribute("class","img-back");
          imgBack.setAttribute("src",image);
-         card.appendChild(imgBack)
+         card.appendChild(imgBack);
+        
          if(cartasVoltedas<2){
             if(cartasVoltedas==0){
               cartaOne = imagenId;
@@ -157,14 +169,14 @@ blockTwo.appendChild(information);
            if (cartasVoltedas==2){
 
               intentos++;
-              document.getElementById("infoMoving").innerHTML =intentos;
+              document.getElementById("infoMoving").innerHTML ="Movimientos:"+ intentos;
               setTimeout(()=>{
               
                 
               
                 if(cartaOne==cartaTwo){
                   cartasEncontradas=cartasEncontradas+1;
-                  document.getElementById("infoCheck").innerHTML =cartasEncontradas;
+                  document.getElementById("infoCheck").innerHTML ="Encontradas:"+cartasEncontradas;
                  
                    let imagencarta =[];
                    let reemplazoOne =document.createElement("div");
@@ -196,7 +208,7 @@ blockTwo.appendChild(information);
                    
                  cartasVoltedas=0;
                  }
-           },1500);
+           },1000);
           
          }
        
