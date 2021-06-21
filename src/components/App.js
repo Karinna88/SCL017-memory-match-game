@@ -67,7 +67,7 @@ iconCheck.className="fas fa-check";
 let infCheck = document.createElement("span");
 infCheck.className = "infCheck";
 infCheck.id = "infoCheck";
-let textCheck =document.createTextNode("0000");
+let textCheck =document.createTextNode("Cartas encontradas:0");
 infCheck.appendChild(textCheck);
 
 dadinfCheck.appendChild(iconCheck);
