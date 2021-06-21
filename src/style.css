@@ -52,152 +52,154 @@ display: center;
   font-style: bold;
   }
 
-.blockTwo{
-  width: 100%;
+  .blockTwo{
+    width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      padding-left: 15%;
+      padding-right: 15%;
+    
+  
+    
+  }
+  
+  .game-Board{   
+    
+    width: 100%;
+    max-width: 1500px;
+    height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    padding-left: 15%;
-    padding-right: 15%;
+    margin-top: 15px;
+    /*background: #F4F6F7;*/
   
-
-  
-}
-
-.game-Board{   
-  
-  width: 100%;
-  max-width: 1500px;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  margin-top: 15px;
-  /*background: #F4F6F7;*/
-
-  
- }
-
- /*.container{  Pertenece a códico ATOM
-  width:90%
-  height:90%;
-   background:url(./image/1813.jpg);
-   margin: 90px auto;
-   display:flex;
-   flex-wrap:wrap;
-    justify-content:center;
-    align-content:center;
-}*/
-
-.card{
-  background: #F4F6F7;
-  margin: 8px;
-  width: 120px;
-  height: 140px;
-  text-align: center;
-  padding: 15px;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px 0 #0c0d0dbd;
-  cursor: pointer;
-  transition: transform 0.8s;
-  transform-style:preserve-3d;
-}
-
-.card-equal{
-  margin: 8px;
-  width: 120px;
-  height: 140px;
-}
-
-.img-front{
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-   display: block;
-   background-repeat: no-repeat;
-   background-size:130px;
-   margin-top: -30px;
-   padding-top: 35px;
-   margin-left: -10px;
-   
-}
-
-
-
-.img-back{
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-transform: rotateY(180deg);
-  display: block;
-  background-size:100px;
-  margin-top: -105px;
-  margin-right: 100px;
-  margin-left: -20px;
- 
- }
-
     
-.information{
-  margin-top: 40px;
-  /*margin-left: 100px;*/
-  margin-bottom: 15px;
-  padding: 15px;
-  /* box-sizing: border-box; */
-  background-color: rgb(255, 255, 255,.3);
-  border-radius: 100px;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-
-
-}
-
-
-
-
-.inf {
-  background-color: #F4F6F7;
-  width: 50px;
-  height: 30px;
-  border-radius: 3px;
- 
-}
-
-.dad{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-
-.fa-magic{
-margin-bottom: 5px;
-font-size:20px;
-}
-
-.infoMoving{
-  background-color: #F4F6F7;
-  width: 50px;
-  height: auto;
-  border-radius: 3px;
-  padding: 5px;
-
-}
-
-.fa-check{
+   }
+  
+   /*.container{  Pertenece a códico ATOM
+    width:90%
+    height:90%;
+     background:url(./image/1813.jpg);
+     margin: 90px auto;
+     display:flex;
+     flex-wrap:wrap;
+      justify-content:center;
+      align-content:center;
+  }*/
+  
+  .card{
+    background: #F4F6F7;
+    margin: 8px;
+    width: 120px;
+    height: 140px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 #0c0d0dbd;
+    cursor: pointer;
+    transition: transform 0.8s;
+    transform-style:preserve-3d;
+  }
+  
+  .card-equal{
+    margin: 8px;
+    width: 120px;
+    height: 140px;
+  }
+  
+  .img-front{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+     display: block;
+     background-repeat: no-repeat;
+     background-size:130px;
+     margin-top: -30px;
+     padding-top: 35px;
+     margin-left: -10px;
+     
+  }
+  
+  
+  
+  .img-back{
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  transform: rotateY(180deg);
+    display: block;
+    background-size:100px;
+    margin-top: -105px;
+    margin-right: 100px;
+    margin-left: -20px;
+   
+   }
+  
+      
+  .information{
+    margin-top: 40px;
+    /*margin-left: 100px;*/
+    margin-bottom: 15px;
+    padding: 15px;
+    /* box-sizing: border-box; */
+    background-color: rgb(255, 255, 255,.3);
+    border-radius: 100px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+  
+  
+  }
+  
+  
+  
+  
+  .inf {
+    background-color: #F4F6F7;
+    width: 50px;
+    height: 30px;
+    border-radius: 3px;
+   
+  }
+  
+  .dad{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  
+  .fa-magic{
+  margin-bottom: 5px;
   font-size:20px;
-}
+  }
+  
+  .infoMoving{
+    background-color: #F4F6F7;
+    width: 50px;
+    height: auto;
+    border-radius: 3px;
+    padding: 5px;
+  
+  }
+  
+  .fa-check{
+    font-size:20px;
+  }
+  
+  .infCheck{
+    font-size: 20px;
+    background: #F4F6F7;;
+    color: #111;
+    border-radius: 4px;
+  }
 
-.infCheck{
-  font-size: 20px;
-  background: #F4F6F7;;
-  color: #111;
-  border-radius: 4px;
-}
+  
