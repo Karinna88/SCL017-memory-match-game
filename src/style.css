@@ -1,56 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Press+Start+2P&display=swap");
 
-*{
- 
-
- 
- box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-background:url(./images/455-degradados.png);
-background-repeat:repeat;
-background-size: cover;
+body {
+  background: url(./assets/images/fondoPrincipal.png);
+  background-repeat:repeat;
+  background-size: cover;
 }
 
-header{
-padding-right: 70px;
-padding-top: 30px;
-padding-left: 400px;
-display: center;
-}
-
-.container{
+.container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-content: center;
 }
 
-
-
-.button{
+header {
   display: flex;
-  flex-direction:column;
-  justify-content: space-around;
+  justify-content: center;
+  padding-top: 40px;
+
+} 
+
+.boxHeader {
+  border: #ff009d 1px solid;
+  padding:10px;
+
+} 
+
+
+/* .logoPrincipal {
+
+} */
+
+
+.initiaContainer{
+  width: 90%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0 auto;
 }
-.button-play, .help {
-  margin-top: 6px;
-  background: #FFCD00;
-  padding: 12px;
+
+
+.box {
+  width: 40%;
+  border: 1px solid red; 
+
+}
+
+.imgIvysaur,  .imgPicachu{
+  width: 100%;
+}
+
+
+/* Contenedor de los botones */
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button-play,
+.help {
+  margin-top: 30px;
+  background: #ffcd00;
   text-align: center;
-  border: #356ABC 5px solid;
-  border-radius: 6px;
+  border: #356abc 10px solid;
+  border-radius: 25px;
   cursor: pointer;
-  padding: 13px 0 13px 15px;
-  height: 3%;
-  width: 15%;
-  font-weight:bold;
-  color:#356ABC;
+  padding: 30px 0 30px 15px;
+  width: 300px;
+  max-width: 350px;
+  font-weight: bold;
+  color: #356abc;
+  font-size: 16px;
   font-family: "Montserrat Alternates";
-  font-size: 25px;
+  font-size: 30px;
   font-style: bold;
-  }
+  /* box-shadow: -3px -3px 7px #fff;
+  3px 3px 5px rgb(94, 104, 121, 0.7); */
+}
+
 
   .blockTwo{
     width: 100%;
@@ -202,4 +237,27 @@ display: center;
     border-radius: 4px;
   }
 
+.infCheck{
+  font-size: 20px;
+  background: #F4F6F7;;
+  color: #111;
+  border-radius: 4px;
+}
+/* _________________________ responsive ______________________________ */
+
+/* Mobile view */
+ @media only screen and (max-width: 430px) {
+  /*.logoPrincipal {
+    justify-content: center;
+    position: center;
+    display: flex;
+    margin: auto;
+  }*/
+
+.imgIvysaur,  .imgPicachu{
+    display: none;
+  }
+} 
   
+
+

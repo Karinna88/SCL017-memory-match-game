@@ -4,7 +4,7 @@ Developers: Hiliana Angulo- Karinna Sepúlveda
 
 _La interfaz de la aplicación será desplegada usando GitHub Pages._
 
-<img src=src\assets\images\Draw-Pictures-of-Pokemon-Step-13.jpg>
+<img src=src\assets\images\Interfaz_de_bienvenidaREADME.png >
 
 ## Índice
 
