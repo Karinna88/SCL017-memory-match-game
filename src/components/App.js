@@ -123,8 +123,10 @@ blockTwo.appendChild(information);
        
        card.className ="card";
        let imgFront = document.createElement("img");
+
        imgFront.id = listPokemon[i].id;
-       imgFront.src = "./images/ball.jpg";
+       imgFront.src =  "./assets/images/ball.jpg";
+
        imgFront.className = "img-front";
        //let imgFrontImage = listPokemon[i].image;
        
@@ -241,5 +243,3 @@ blockTwo.appendChild(exitGame);
 
 
 export default App;
-
-
