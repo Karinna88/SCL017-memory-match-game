@@ -192,6 +192,7 @@ header {
   
   
   }
+<<<<<<< HEAD
   
   .inf {
     background-color: #F4F6F7;
@@ -202,24 +203,39 @@ header {
   }
   
   .dad{
+=======
+
+  .dadinfTime{
+>>>>>>> a1215128d05690de3f97c5ff734d796ccd4e6841
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-wrap: nowrap;
+    
   }
+
+  .fa-hourglass-half{
+    font-size:20px;
+    
+  }
+
+  .infTime{
+    font-size: 20px;
+    background: #F4F6F7;;
+    color: #111;
+    border-radius: 4px;
+  }
+
+
   
-  
-  .fa-magic{
-  margin-bottom: 5px;
+   .fa-magic{
   font-size:20px;
   }
   
-  .infoMoving{
-    background-color: #F4F6F7;
-    width: 50px;
-    height: auto;
-    border-radius: 3px;
-    padding: 5px;
+  .infMoving{
+    font-size: 20px;
+    background: #F4F6F7;;
+    color: #111;
+    border-radius: 4px;
   
   }
   
@@ -234,24 +250,17 @@ header {
     border-radius: 4px;
   }
 
-.infCheck{
-  font-size: 20px;
-  background: #F4F6F7;;
-  color: #111;
-  border-radius: 4px;
-}
-
-.copyright{
-  position: fixed;
-  width: 100%;
-  background: #356abc;
-  color: #fff;
-  text-align: center;
-  bottom: 0px;
-  padding: 30px 0;
-  font-size: 30px;
-}
-
+  .copyright{
+    position: fixed;
+    width: 100%;
+    background: #356abc;
+    color: #fff;
+    text-align: center;
+    bottom: 0px;
+    padding: 30px 0;
+    font-size: 30px;
+  }
+  
 /* _________________________ responsive ______________________________ */
 
 /* Mobile view */
