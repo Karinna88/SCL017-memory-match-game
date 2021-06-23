@@ -1,14 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Press+Start+2P&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Press+Start+2P&display=swap");*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
+html{
+  height: 100%;
+}
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: url(./assets/images/fondoPrincipal.png);
-  background-repeat:repeat;
-  background-size: cover;
+  background-color: rgb(176, 244, 100);
+  background-image: linear-gradient(rgb(176, 244, 100) 0%, rgb(66, 155, 221) 100%);
+ 
 }
+
 
 .container {
   width: 100%;
@@ -25,8 +31,7 @@ header {
 } 
 
 .boxHeader {
-  border: #ff009d 1px solid;
-  padding:10px;
+ padding:10px;
 
 } 
 
@@ -46,10 +51,8 @@ header {
 
 
 .box {
-  width: 40%;
-  border: 1px solid red; 
-
-}
+  width: 70%;
+  }
 
 .imgIvysaur,  .imgPicachu{
   width: 100%;
@@ -68,23 +71,27 @@ header {
 .button-play,
 .help {
   margin-top: 30px;
-  background: #ffcd00;
+  background: #FAD961;
+  background-image: linear-gradient( 90deg, #FAD961 0%, #F76B1C 100%);
   text-align: center;
-  border: #356abc 10px solid;
-  border-radius: 25px;
+  border-radius: 100px;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 20%);
   cursor: pointer;
   padding: 30px 0 30px 15px;
   width: 300px;
   max-width: 350px;
   font-weight: bold;
-  color: #356abc;
+  color: #fff;
+  letter-spacing: 6px;
+  line-height: 1.2;
   font-size: 16px;
-  font-family: "Montserrat Alternates";
-  font-size: 30px;
+  font-family: 'Jura',sans-serif;
+  font-weight: 700;
+  font-size: 40px;
   font-style: bold;
-  /* box-shadow: -3px -3px 7px #fff;
-  3px 3px 5px rgb(94, 104, 121, 0.7); */
+  border: none;
 }
+
 
 
   .blockTwo{
@@ -133,11 +140,10 @@ header {
     width: 120px;
     height: 140px;
     text-align: center;
-    padding: 15px;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 #0c0d0dbd;
     cursor: pointer;
-    transition: transform 0.8s;
+    transition: transform 0.4s;
     transform-style:preserve-3d;
   }
   
@@ -147,42 +153,42 @@ header {
     height: 140px;
   }
   
+  /*Imagen Frontal de la carta*/
   .img-front{
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
      display: block;
      background-repeat: no-repeat;
      background-size:130px;
-     margin-top: -30px;
-     padding-top: 35px;
-     margin-left: -10px;
+     margin-top: 27px;
+     margin-left: 9px;
      
   }
   
   
-  
+   /*Imagen Posterior de la carta*/
   .img-back{
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
     display: block;
     background-size:100px;
-    margin-top: -105px;
-    margin-right: 100px;
-    margin-left: -20px;
-   
+    margin-top: -109px;
+    
+    margin-left: 0px;
+  
    }
   
       
   .information{
-    margin-top: 40px;
-    /*margin-left: 100px;*/
-    margin-bottom: 15px;
+    margin-top:28px;
+    margin-left: 100px;
+    margin-bottom:-21px;
     padding: 15px;
     /* box-sizing: border-box; */
-    background-color: rgb(255, 255, 255,.3);
-    border-radius: 100px;
-    width: 100%;
+    background-color: rgb(255, 255, 255,0);
+    border-radius: 6px;
+    width:80%;
     height: 70px;
     display: flex;
     flex-direction: row;
@@ -193,49 +199,70 @@ header {
   
   }
 
-  .dadinfTime{
+  .divTime{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     
   }
 
-  .fa-hourglass-half{
-    font-size:20px;
+
+
+.fa-clock, .fa-magic, .fa-check{
+    font-size:25px;
+    color:black
     
   }
 
-  .infTime{
+  .infTime, .infMoving, .infCheck{
+    font-family:'Merriweather Sans', sans-serif;   /*'Jura',sans-serif;*/
+    
     font-size: 20px;
-    background: #F4F6F7;;
-    color: #111;
+    background-color: rgb(255, 255, 255,0);
+    color:black;
     border-radius: 4px;
+  
   }
 
+  .information-botton{
+    margin-top: 20px;
+    margin-left: 280px;
+    margin-bottom: 15px;
+    padding: 15px;
+    /* box-sizing: border-box; */
+    background-color: rgb(255, 255, 255,.1);
+    border-radius: 6px;
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+   
+  }
 
-  
-   .fa-magic{
-  font-size:20px;
-  }
-  
-  .infMoving{
+  .helpInformation, .home, .undo{
+    border-radius: 50px;
+    background-image: linear-gradient( 90deg, #eca5e1 0%, #d280dd 100%);
+    width: 65px;
+    height: 65px;
     font-size: 20px;
-    background: #F4F6F7;;
-    color: #111;
-    border-radius: 4px;
-  
+    color: black;
+    transition: all .1s ease-out;
+    cursor: pointer;
+    text-align: center;
+    padding-top:15px;
+    }
+
+  .fa-info, .fa-home, .fa-undo{
+    font-size:30px;
   }
   
-  .fa-check{
-    font-size:20px;
-  }
   
-  .infCheck{
-    font-size: 20px;
-    background: #F4F6F7;;
-    color: #111;
-    border-radius: 4px;
-  }
+  
+  
+ 
 
   .copyright{
     position: fixed;
@@ -251,18 +278,30 @@ header {
 /* _________________________ responsive ______________________________ */
 
 /* Mobile view */
- @media only screen and (max-width: 430px) {
-  /*.logoPrincipal {
-    justify-content: center;
-    position: center;
-    display: flex;
-    margin: auto;
-  }*/
+
+
+@media only screen and (max-width: 430px) {
+  .logoPrincipal {
+   width: 100%;
+   
+  }
+
+  .button-play,
+.help {
+ max-width: 200px;
+ font-size: 20px;
+}
+
+  .copyright{
+    display: none;
+  }
+
 
 .imgIvysaur,  .imgPicachu{
     display: none;
   }
 } 
   
+
 
 
