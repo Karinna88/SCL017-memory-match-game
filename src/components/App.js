@@ -1,19 +1,3 @@
-//
-// Para incluir los diferentes sets de cartas podemos _importar_ el archivo
-// JavasSript que contenga el `export` correspondiente...
-//
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
-
 import pokemon from "../data/pokemon/pokemon.js";
 
 //------------------Creando data de imágenes----------------------
@@ -36,6 +20,7 @@ const App = () => {
       lastIndex = lastIndex - 1;
       value = value - 1;
     }
+  }
     
     
     //--------------------------------Función para barajear arreglos-----------------------
@@ -195,7 +180,7 @@ blockTwo.appendChild(information);
                     reemplazoTwo.className ="card-equal";
                     let reemplazo =[reemplazoOne,reemplazoTwo];
                     let k=0;
-                      for (let j = 0; j < chequeo.length; j++){
+                      for (let j = chequeo.length-1; j >-1; j--){
                          imagencarta[j] = chequeo[j].getAttribute("id");
                          if(imagencarta[j]==cartaOne){
                             //chequeo[j].setAttribute("style","display:none");
