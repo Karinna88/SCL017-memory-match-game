@@ -1,15 +1,6 @@
 import pokemon from '../data/pokemon/pokemon.js';
 
 
-
-const App = () => {
-  //------------------Creando data de imágenes--------------//
-  let pokemonList = [];
-  for (let i = 0; i < pokemon.items.length; i++) {
-    pokemonList.push(pokemon.items[i], pokemon.items[i]);
-
-  }
-
   //--------------------------------Función para barajear arreglos-----------------------
   function shuffle(array) {
     let lastIndex = array.length - 1;
@@ -24,6 +15,34 @@ const App = () => {
     }
     return array;
   }
+  //-----------------------------Funcion efecto match-------------------------------------
+
+  function efectoMatch(carta1, array){
+    let imagencarta =[];
+    let reemplazoOne = document.createElement("div");
+                  reemplazoOne.className = "card-equal";
+                  let reemplazoTwo = document.createElement("div");
+                  reemplazoTwo.className = "card-equal";
+                  let reemplazo = [reemplazoOne, reemplazoTwo];
+                  let k = 0;
+                  let padre = array[k].parentNode;
+                  for (let j = array.length - 1; j > -1; j--) {
+                    imagencarta[j] = array[j].getAttribute("id");
+                    if (imagencarta[j] == carta1) {
+                      padre.replaceChild(reemplazo[k], array[j]);
+                      k = k + 1;
+                    }
+                  }return padre
+                }
+//----------------------------------------------------------
+const App = () => {
+  //------------------Creando data de imágenes--------------//
+  let pokemonList = [];
+  for (let i = 0; i < pokemon.items.length; i++) {
+    pokemonList.push(pokemon.items[i], pokemon.items[i]);
+
+  }
+
 
 
   //------Página de juego-----//
@@ -91,16 +110,14 @@ const App = () => {
   let cardOne;
   let cardTwo;
   let cardFound = 0;
-  //let tiempo =0;
-  let cardMovement = 0;
+ let cardMovement = 0;
   let time;
   let seconds = 0;
   let minutes = 0;
-  
+  let primeraCartaVolteada = true; //nueva linea
 
   //--------------------------------------Función contadora de tiempo-----------------------------
   function timer() {
-    // Update the count every 1 second
     time = setInterval(function () {
       seconds++;
       if (seconds == 60) {
@@ -110,11 +127,11 @@ const App = () => {
       document.getElementById("infoTime").innerHTML = "Tiempo:0" + minutes + ":" + seconds;
     }, 1000);
   }
-  //-----------------------------------------------
+
+
+  //----------------------------------------------------------------------------------------------
 
   pokemonList = shuffle(pokemonList); //----Evaluando la función Shuffle en pokemonList
-  console.log(pokemonList);
-
   for (let i = 0; i < pokemonList.length; i++) {
     let card = document.createElement("div");
     card.id = pokemonList[i].id;
@@ -128,8 +145,10 @@ const App = () => {
     card.appendChild(imgBack);
     let setOfCards = document.getElementsByClassName("card");
     imgFront.addEventListener("click", (e) => {
-
-      timer();
+     if (primeraCartaVolteada == true){
+        timer();
+      }
+      primeraCartaVolteada = false;
       card.removeChild(imgBack);
       let carN = e.target;
       let imagenId = carN.getAttribute("id");
@@ -139,7 +158,7 @@ const App = () => {
       imgBack.setAttribute("class", "img-back");
       imgBack.setAttribute("src", image);
       card.appendChild(imgBack);
-
+      
       if (flippedCards < 2) {
         if (flippedCards == 0) {
           cardOne = imagenId;
@@ -159,8 +178,9 @@ const App = () => {
             if (cardOne == cardTwo) {
               cardFound = cardFound + 1;
               document.getElementById("infoCheck").innerHTML = "Encontradas:" + cardFound;
-
-              let imagencarta = [];
+              efectoMatch(cardOne, setOfCards);
+//-------funcion new----
+             /* let imagencarta = [];
               let reemplazoOne = document.createElement("div");
               reemplazoOne.className = "card-equal";
               let reemplazoTwo = document.createElement("div");
@@ -170,18 +190,19 @@ const App = () => {
 
               for (let j = setOfCards.length - 1; j > -1; j--) {
                 imagencarta[j] = setOfCards[j].getAttribute("id");
-                if (imagencarta[j] == cardOne) {//chequeo[j].setAttribute("style","display:none");
+                if (imagencarta[j] == cardOne) {
                   gameBoard.replaceChild(reemplazo[k], setOfCards[j]);
                   k = k + 1;
                 }
-              }
+              }*/
+//-----fin funcion-----              
               if (cardFound == 9) {
                 clearInterval(time);
                 alert("Ganaste!!");
               }
             }
-            for (let carta of setOfCards) {
-              carta.style.transform = "";
+            for (let element of setOfCards) {
+              element.style.transform = "";
               //let imgNew=document.createElement("img");
               flippedCards = 0;
             }
@@ -194,42 +215,16 @@ const App = () => {
 
     gameBoard.appendChild(card);
   }
-  blockTwo.appendChild(gameBoard);
+  
+  blockTwo.appendChild(gameBoard); //estaba
 
-  //--------------------------------------Barra de salida de juego------------------------//
-  let exitGame = document.createElement("div");
-  exitGame.className = "information-botton";
-
-  let help = document.createElement("span");
-  help.className = "helpInformation";
-  let iconHelp = document.createElement("i")
-  iconHelp.className = "fas fa-info";
-  help.appendChild(iconHelp);
-
-  let home = document.createElement("span");
-  home.className = "home";
-  home.id = "home"
-  let iconHome = document.createElement("i")
-  iconHome.className = "fas fa-home";
-  home.appendChild(iconHome);
-
-  /*home.addEventListener("click", ()=>{
-  document.getElementById("blockTwo").style.display = "none";
-  document.getElementById("blockOne").style.display = "block";
-  });*/
-
-  let undo = document.createElement("span");
-  undo.className = "undo";
-  let iconUndo = document.createElement("i")
-  iconUndo.className = "fas fa-undo";
-  undo.appendChild(iconUndo);
-
-  exitGame.appendChild(help);
-  exitGame.appendChild(home);
-  exitGame.appendChild(undo);
-  blockTwo.appendChild(exitGame);
+  
   return blockTwo;
 }
 
+const objeto = {shuffle, efectoMatch,App};
+export default objeto;
 
-export default App;
+
+
+
