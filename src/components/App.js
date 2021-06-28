@@ -37,6 +37,8 @@ function shuffle(array) {
 //   return padre;
 // }
 
+
+// -------------NUEVA FUNCIÓN MATCH------------------------------------
 function efectoMatch2(carta1) {
   Array.from(document.getElementsByClassName(carta1)).forEach(
     function(element, index, array) {
@@ -48,6 +50,7 @@ function efectoMatch2(carta1) {
 return true;
 }
 
+// ---------------FUNCIÓN SEGUNDOS/ MINUTOS
 function secondsToHms(segundos) {
 
   let min = Math.floor(segundos % 3600 / 60);
@@ -69,6 +72,7 @@ const App = () => {
   //------Página de juego-----//
   let blockTwo = document.createElement("div");
   blockTwo.className = "blockTwo";
+  blockTwo.id = "blockTwo";
 
   //------Barra de información--------------------//
 
@@ -118,14 +122,14 @@ const App = () => {
   divMoving.appendChild(infMoving);
   information.appendChild(divMoving);
 
-  //-----------------------------Se añade barra de información a página de juego----------//
+  //----------------Se añade barra de información a página de juego----------//
   blockTwo.appendChild(information);
 
-  //--------------------tablero de juego------------------------//
+  //----------------tablero de juego------------------------//
   let gameBoard = document.createElement("div");
   gameBoard.className = "game-Board";
 
-  //---------------Nuevas variables----------------------------//
+  //-----------------Nuevas variables----------------------------//
   let flippedCards = 0;
   let cardOne;
   let cardTwo;
@@ -136,7 +140,7 @@ const App = () => {
   // let minutes = 0;
   let primeraCartaVolteada = true; //nueva linea
 
-  //--------------------------------------Función contadora de tiempo-----------------------------
+  //-----------------Función contadora de tiempo-----------------------------
   function timer() {
     time = setInterval(function () {
       seconds++;
@@ -148,11 +152,8 @@ const App = () => {
     //  secondsToHms(seconds);
   //    document.getElementById("infoTime").innerHTML =  "Tiempo:0" + minutes + ":" + seconds;
       document.getElementById("infoTime").innerHTML =  secondsToHms(seconds);
-    }, 500);
+    }, 1000);
   }
-
-
-
 
   //----------------------------------------------------------------------------------------------
 
@@ -226,9 +227,16 @@ const App = () => {
                 }
               }*/
               //-----fin funcion-----
-              if (cardFound == 9) {
+              if (cardFound == (pokemonList.length)/2) {
+
+
                 clearInterval(time);
-                alert("Ganaste!!");
+               // alert("Ganaste!!");
+               document.getElementById("result").style.display="block";
+               document.getElementById("blockTwo").style.display="none";
+               document.getElementById("cantidadMov").innerHTML= cardMovement;
+               document.getElementById("cantidadTime").innerHTML= secondsToHms(seconds);
+
               }
             }
             for (let element of setOfCards) {
