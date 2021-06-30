@@ -105,7 +105,9 @@ header {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 20px;
+    padding-top: 60px;
+    padding-bottom: 40px;
     }
 
    .card{
@@ -211,6 +213,7 @@ header {
     flex-direction:row;
     flex-wrap: nowrap;
     justify-content: space-around;
+    margin-left: 300px;
 
   }
 
@@ -234,7 +237,7 @@ header {
     font-size:30px;
   }
 
-  /*__________ FOOTER____________ */
+  /*_______ FOOTER______ */
   .copyright{
   
     width: 100%;
@@ -247,7 +250,7 @@ header {
     position: fixed;
   }
   
-/* ____________________________  MODAL  ______________________________________________________*/
+/* ________MODAL____________*/
 
 .modal-container{
   opacity: 0;

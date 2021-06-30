@@ -57,3 +57,4 @@ describe("displayTime", () => {
     expect(objeto.secondsToHms(130)).toEqual("2 minutes: 10 seconds");
   });
 });
+

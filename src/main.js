@@ -1,9 +1,7 @@
 import objeto from "./components/App.js";
 
-//document.getElementById("informationBotton").style.display = "none";
 document.getElementById("buttonPlay").addEventListener("click", () => {
-  //document.getElementById("blockOne").style.display = "none";
-  //document.getElementById("container").appendChild(App());
+
   document
     .getElementById("container")
     .replaceChild(objeto.App(), document.getElementById("blockOne"));
@@ -19,7 +17,7 @@ document.getElementById("undo").addEventListener("click", () => {
 });
 
 
-// _____________MODAL
+// _____________MODAL ________________________________
 
 let cerrar = document.querySelectorAll(".close")[0];
 let abrir = document.getElementById("help");
@@ -27,7 +25,7 @@ let modal = document.querySelectorAll(".modal")[0];
 let modalC = document.querySelectorAll(".modal-container")[0];
 
 abrir.addEventListener("click", function (e) {
-  console.log("open");
+
   e.preventDefault();
   modalC.style.opacity = "1";
   modalC.style.visibility = "visible";

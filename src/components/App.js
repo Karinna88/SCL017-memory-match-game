@@ -1,6 +1,6 @@
 import pokemon from "../data/pokemon/pokemon.js";
 
-//--------------------------------Función para barajear arreglos-----------------------
+//-------------Función para barajear arreglos-----------------------
 function shuffle(array) {
   let lastIndex = array.length - 1;
   let value = array.length;
@@ -14,33 +14,13 @@ function shuffle(array) {
   }
   return array;
 }
-//-----------------------------Funcion efecto match-------------------------------------
-
-// function efectoMatch(carta1, array) {
-//   let imagencarta = [];
-//   let reemplazoOne = document.createElement("div");
-//   reemplazoOne.className = "card-equal";
- 
-//   let reemplazoTwo = document.createElement("div");
-//   reemplazoTwo.className = "card-equal";
- 
-//   let reemplazo = [reemplazoOne, reemplazoTwo];
-//   let k = 0;
-//   let padre = array[k].parentNode;
-//   for (let j = array.length - 1; j > -1; j--) {
-//     imagencarta[j] = array[j].getAttribute("id");
-//     if (imagencarta[j] == carta1) {
-//       padre.replaceChild(reemplazo[k], array[j]);
-//       k = k + 1;
-//     }
-//   }
-//   return padre;
-// }
 
 
-// -------------NUEVA FUNCIÓN MATCH------------------------------------
-function efectoMatch2(carta1) {
-  Array.from(document.getElementsByClassName(carta1)).forEach(
+// -------------FUNCIÓN MATCH------------------------------------
+function efectoMatch2(pokemonName) {
+  let elements  = document.getElementsByClassName(pokemonName);
+  Array.from(elements).forEach(
+    // element=divCard, index=numero de iteración, array=me entrega elements
     function(element, index, array) {
         element.classList.add("card-equal");
         element.classList.remove("card");
@@ -55,11 +35,12 @@ function secondsToHms(segundos) {
 
   let min = Math.floor(segundos % 3600 / 60);
   let seg = Math.floor(segundos % 3600 % 60);
-
+                //min>0
   let mDisplay = min > 0 ? min + (min == 1 ? " minute: " : " minutes: ") : "00:";
   let sDisplay = seg > 0 ? seg + (seg == 1 ? " second" : " seconds") : "00";
   return  mDisplay + sDisplay; 
 }
+
 
 //----------------------------------------------------------
 const App = () => {
@@ -93,6 +74,7 @@ const App = () => {
   divTime.appendChild(iconTime);
   divTime.appendChild(infTime);
   information.appendChild(divTime);
+
   //-------Información de Match--------------------//
   let divCheck = document.createElement("div");
   divCheck.className = "divCheck";
@@ -107,6 +89,7 @@ const App = () => {
   divCheck.appendChild(iconCheck);
   divCheck.appendChild(infCheck);
   information.appendChild(divCheck);
+
   //-----Información de Movimientos----------------//
   let divMoving = document.createElement("div");
   divMoving.className = "divMoving";
@@ -125,7 +108,7 @@ const App = () => {
   //----------------Se añade barra de información a página de juego----------//
   blockTwo.appendChild(information);
 
-  //----------------tablero de juego------------------------//
+  //----------------Tablero de juego------------------------//
   let gameBoard = document.createElement("div");
   gameBoard.className = "game-Board";
 
@@ -143,19 +126,11 @@ const App = () => {
   //-----------------Función contadora de tiempo-----------------------------
   function timer() {
     time = setInterval(function () {
-      seconds++;
-      // if (seconds == 60) {
-      //   minutes++;
-      //   seconds = 0;
-      // }
-
-    //  secondsToHms(seconds);
-  //    document.getElementById("infoTime").innerHTML =  "Tiempo:0" + minutes + ":" + seconds;
-      document.getElementById("infoTime").innerHTML =  secondsToHms(seconds);
+      document.getElementById("infoTime").innerHTML =  secondsToHms( seconds++);
     }, 1000);
   }
 
-  //----------------------------------------------------------------------------------------------
+  //--------------------------------------------------------------------------
 
   pokemonList = shuffle(pokemonList); //----Evaluando la función Shuffle en pokemonList
   for (let i = 0; i < pokemonList.length; i++) {
@@ -166,14 +141,17 @@ const App = () => {
     imgFront.id = pokemonList[i].id;
     imgFront.src = "./assets/images/ball.jpg";
     imgFront.className = "img-front" +" img_"   + card.id;
+    card.appendChild(imgFront);
 
+    //Para mostrar los nombres de los pokemones provisoriamente************
     let span = document.createElement("span");
     span.innerHTML=card.id
-    card.appendChild(imgFront);
     card.appendChild(span);
+
+   
     let imgBack = document.createElement("img"); //
     card.appendChild(imgBack);
-    let setOfCards = document.getElementsByClassName("card");
+    
     imgFront.addEventListener("click", (e) => {
       if (primeraCartaVolteada == true) {
         timer();
@@ -202,49 +180,31 @@ const App = () => {
         flippedCards = flippedCards + 1;
         if (flippedCards == 2) {
           cardMovement++; //===cardMovement=cardMovement+1;
-          document.getElementById("infoMoving").innerHTML =
-            "Movimientos:" + cardMovement;
+          document.getElementById("infoMoving").innerHTML =  "Movimientos:" + cardMovement;
           setTimeout(() => {
             if (cardOne == cardTwo) {
               cardFound = cardFound + 1;
               document.getElementById("infoCheck").innerHTML = "Encontradas:" + cardFound;
              // efectoMatch(cardOne, setOfCards);
               efectoMatch2(cardOne);
-              //-------funcion new----
-              /* let imagencarta = [];
-              let reemplazoOne = document.createElement("div");
-              reemplazoOne.className = "card-equal";
-              let reemplazoTwo = document.createElement("div");
-              reemplazoTwo.className = "card-equal";
-              let reemplazo = [reemplazoOne, reemplazoTwo];
-              let k = 0;
+    
 
-              for (let j = setOfCards.length - 1; j > -1; j--) {
-                imagencarta[j] = setOfCards[j].getAttribute("id");
-                if (imagencarta[j] == cardOne) {
-                  gameBoard.replaceChild(reemplazo[k], setOfCards[j]);
-                  k = k + 1;
-                }
-              }*/
-              //-----fin funcion-----
               if (cardFound == (pokemonList.length)/2) {
-
-
                 clearInterval(time);
-               // alert("Ganaste!!");
+               
+               //Bloque Resultados*****
                document.getElementById("result").style.display="block";
                document.getElementById("blockTwo").style.display="none";
                document.getElementById("cantidadMov").innerHTML= cardMovement;
                document.getElementById("cantidadTime").innerHTML= secondsToHms(seconds);
-
               }
             }
+           let setOfCards = document.getElementsByClassName("card");
             for (let element of setOfCards) {
               element.style.transform = "";
-              //let imgNew=document.createElement("img");
-              flippedCards = 0;
             }
-          }, 1000);
+            flippedCards = 0;
+          }, 1000);   
         }
       }
     });
@@ -257,5 +217,5 @@ const App = () => {
   return blockTwo;
 };
 
-const objeto = { shuffle /* efectoMatch*/,efectoMatch2, secondsToHms, App  };
+const objeto = { shuffle, efectoMatch2, secondsToHms, App  };
 export default objeto;
