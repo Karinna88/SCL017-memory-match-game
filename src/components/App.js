@@ -35,7 +35,7 @@ function secondsToHms(segundos) {
 
   let min = Math.floor(segundos % 3600 / 60);
   let seg = Math.floor(segundos % 3600 % 60);
-                //min>0
+                
   let mDisplay = min > 0 ? min + (min == 1 ? " minute: " : " minutes: ") : "00:";
   let sDisplay = seg > 0 ? seg + (seg == 1 ? " second" : " seconds") : "00";
   return  mDisplay + sDisplay; 

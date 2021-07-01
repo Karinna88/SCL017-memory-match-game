@@ -19,14 +19,14 @@ _La interfaz de la aplicación será desplegada usando GitHub Pages._
 En este proyecto se crea un versión web del juego Memory Match, en la que una jugadora pueda jugar sola en el navegador, para ello los objetivos de aprendizaje que se abordaron son: diseñar y construir una interfaz web basada en data e interacción con la usuaria, las herramientas que utilizamos fueron HTML y CSS, JavaScript, testeo unitario, estructura del código y guía de estilo.
 ## 2. Definición del producto:
 
-La aplicación “Pokémon Memory Game”, es una página web orientada principalmente a seguidores de pokémon en donde pueden poner a prueba su memoria visual, cuenta con un set de cartas con personajes de la serie.
+La aplicación “PokéMemory”, es una página web orientada principalmente a seguidores de pokémon en donde pueden poner a prueba su memoria visual, cuenta con un set de cartas con personajes de la serie.
 En las actividades de los juegos de memoria se tienen que ir descubriendo parejas de elementos iguales o relacionados entre ellos, que se encuentran escondidos. En cada tirada se destapan un par de piezas que se vuelven a esconder si no hacen par. El objetivo es destapar todas las parejas.
 
 <img src=src\assets\images\barra.jpg>
 
 ## 3. Historias de usuario:
 Los usuarios de este juego son principalmente adultos entre 25 a 35 años, en su mayoria conocedores de la temática pokémon.
-Gustan de realizar juegos online, en ventanas de sus estudios, tiempos de descanso en el trabajo, entre otras y que esperan acceder a los juegos desde cualquier dispositivo.
+Gustan de realizar juegos online, en ventanas de sus estudios, tiempos de descanso en el trabajo, entre otras y esperan acceder a los juegos desde cualquier dispositivo.
 
 ### HU 1. "Como usuario quiero poder jugar sin registrarme, y acceder al juego tanto de mi pc como del celular"
 
@@ -50,11 +50,11 @@ _CARACTERISTICAS: El usuario debe encontrar coherencia en el diseño de la aplic
 * Criterio mínimo de aceptación: que al visualizar la página se entienda el contexto de pokémon .
 
 Product Backlog
-- buscar fuentes creadoras de tipografia de pokémon. 
-- crear un nombre de la aplicación que se relacione con la tematica de pokémon.
-- crear interfaz con colores de pokémon
-- incorporar elemento de diseño distintivo de pokémon en la cara frontal de las cartas.
-- crear mensaje emergente que se visualice como ventana de diálogo.
+- Buscar fuentes creadoras de tipografia de pokémon. 
+- Crear un nombre de la aplicación que se relacione con la tematica de pokémon.
+- Crear interfaz con colores de pokémon
+- Incorporar elemento de diseño distintivo de pokémon en la cara frontal de las cartas.
+- Crear mensaje emergente que se visualice como ventana de diálogo.
 
 
 ### HU 3. "Como jugador quiero que sea de acceso rápido y sencillo, para poder disfrutar del juego lo más que sea posible en mi tiempo libre."
@@ -66,7 +66,7 @@ _CARACTERISTICAS: El usuario debe poder acceder rápido al juego, y que este sea
 
 Product Backlog
 - crear botones con funcionalidad (juego, instrucciones, entre otras), para que el usuario pueda utilizarlos cuando requiere la información.
-- 
+
   
 
 
@@ -80,7 +80,7 @@ Se desarrollaron los prototipos de baja fidelidad, considerando las necesidades 
 ### Prototipo de alta fidelidad:
 Luego creamos el prototipo de alta fidelidad, el cual representa nuestro diseño ideal de la solución, incluyendo más opciones para el usuario. Aquí la visualización del prototipo:
 
-(FOTOS DE LO REALIZADO EN FIGMA)
+(FOTOS)
 
 ## Testeo de usabilidad:
 Con nuestro testeo notamos que ciertos aspectos del prototipo no calzaban... (principios de diseño/ HU, entre otras)
