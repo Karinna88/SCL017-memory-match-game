@@ -1,21 +1,24 @@
 /*@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&family=Press+Start+2P&display=swap");*/
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-image: linear-gradient(rgb(176, 244, 100) 0%, rgb(66, 155, 221) 100%);
+  background-image: linear-gradient(
+    rgb(176, 244, 100) 0%,
+    rgb(66, 155, 221) 100%
+  );
   background-position: center;
   background-size: cover;
-  background-repeat:no-repeat;
-  height: 110vh;
-  }
-
+  background-repeat: no-repeat; 
+  height: 110vh; 
+}
 
 .container {
-  width: 100%;
+  width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -25,32 +28,28 @@ header {
   display: flex;
   justify-content: center;
   padding-top: 40px;
-
-} 
+}
 
 .boxHeader {
- padding:10px;
+  padding: 10px;
+}
 
-} 
-
-
-.initiaContainer{
-  width: 90%;
+.initiaContainer {
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   margin: 0 auto;
 }
 
-
 .box {
-  width: 40%;
-  }
-
-.imgIvysaur,  .imgPicachu{
-  width: 100%;
+  width: 60%;
 }
 
+.imgIvysaur,
+.imgPicachu {
+  width: 100%;
+}
 
 /* Contenedor de los botones */
 .button {
@@ -64,8 +63,8 @@ header {
 .button-play,
 .help {
   margin-top: 30px;
-  background: #FAD961;
-  background-image: linear-gradient( 90deg, #FAD961 0%, #F76B1C 100%);
+  background: #fad961;
+  background-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%);
   text-align: center;
   border-radius: 100px;
   text-shadow: 0 1px 3px rgb(0 0 0 / 20%);
@@ -78,184 +77,177 @@ header {
   letter-spacing: 6px;
   line-height: 1.2;
   font-size: 16px;
-  font-family: 'Jura',sans-serif;
+  font-family: "Jura", sans-serif;
   font-weight: 700;
   font-size: 40px;
   font-style: bold;
   border: none;
 }
 
-.blockTwo{
-    width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      justify-content: center;
-      padding-left: 15%;
-      padding-right: 15%;
-}    
- 
-.game-Board{   
-    
-    width: 100%;
-    max-width: 1500px;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    margin-top: 20px;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    }
+.blockTwo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding-left: 15%;
+  padding-right: 15%;
+}
 
-   .card{
-    background: #F4F6F7;
-    margin: 8px;
-    width: 120px;
-    height: 140px;
-    text-align: center;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px 0 #0c0d0dbd;
-    cursor: pointer;
-    transition: transform 0.4s;
-    transform-style:preserve-3d;
-  }
+.game-Board {
+  width: 100%;
+  max-width: 1500px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.card {
+  background: #f4f6f7;
+  margin: 8px;
+  width: 120px;
+  height: 140px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 #0c0d0dbd;
+  cursor: pointer;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+
+.card-equal {
+  margin: 8px;
+  width: 120px;
+  height: 140px;
+}
+
+/*Imagen Frontal de la carta*/
+.img-front {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 130px;
+  margin-top: 27px;
+  margin-left: 9px;
+}
+
+/*Imagen Posterior de la carta*/
+.img-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: block;
+  background-size: 100px;
+  margin-top: -109px;
+  margin-left: 0px;
+}
+
+.information {
   
-  .card-equal{
-    margin: 8px;
-    width: 120px;
-    height: 140px;
-  }
+  background-color: rgb(255, 255, 255, 0);
+  border-radius: 6px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.divTime {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+/* iconos */
+.fa-clock,
+.fa-magic,
+.fa-check {
+  font-size: 25px;
+  color: black;
+}
+
+.infTime,
+.infMoving,
+.infCheck {
+  font-family: 'Jura',sans-serif;
+  font-size: 25px;
+  background-color: rgb(255, 255, 255, 0);
+  color: black;
+  border-radius: 4px;
+}
+.block-Three {
+  display: none;
+  padding: 15px;
+  background-color: rgb(255, 255, 255, 0);
+  border-radius: 6px;
+  height: auto;
+}
+
+.information-botton {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
   
-  /*Imagen Frontal de la carta*/
-  .img-front{
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-     display: block;
-     background-repeat: no-repeat;
-     background-size:130px;
-     margin-top: 27px;
-     margin-left: 9px;
-     
-  }
-  
-  
-   /*Imagen Posterior de la carta*/
-  .img-back{
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-    display: block;
-    background-size:100px;
-    margin-top: -109px;
-    
-    margin-left: 0px;
-  
-   }
-  
-      
-  .information{
-    margin-top:28px;
-    margin-left: 100px;
-    margin-bottom:-21px;
-    padding: 15px;
-    /*box-sizing: border-box;*/
-    background-color: rgb(255, 255, 255,0);
-    border-radius: 6px;
-    width:80%;
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-  }
+}
 
-  .divTime{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    
-  }
+.helpInformation,
+.home,
+.undo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 50px;
+  background-image: linear-gradient(90deg, #eca5e1 0%, #d280dd 100%);
+  width: 65px;
+  height: 65px;
+  font-size: 20px;
+  color: black;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 15px;
+}
 
-.fa-clock, .fa-magic, .fa-check{
-    font-size:25px;
-    color:black 
-  }
+.fa-info,
+.fa-home,
+.fa-undo {
+  font-size: 30px;
+}
 
-  .infTime, .infMoving, .infCheck{
-    font-family:'Merriweather Sans', sans-serif;   /*'Jura',sans-serif;*/
-    font-size: 20px;
-    background-color: rgb(255, 255, 255,0);
-    color:black;
-    border-radius: 4px;
-  
-  }
-  .block-Three{
-    display:none;
-    margin-top: 20px;
-    margin-left: 480px;
-    margin-bottom: 15px;
-    padding: 15px;
-    /* box-sizing: border-box; */
-    background-color: rgb(255, 255, 255,0);
-    border-radius: 6px;
-    width: 30%;
-    height: auto;
-    }
+.iconHome {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
+/*_______ FOOTER______ */
+.copyright {
+  width: 100%;
+  background: #356abc;
+  color: #fff;
+  text-align: center;
+  bottom: 0px;
+  padding: 30px 0;
+  font-size: 30px;
+  position: fixed;
+}
 
-  .information-botton{
-    /*background: white;*/
-    display: flex;
-    flex-direction:row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    margin-left: 300px;
-
-  }
-
-  .helpInformation, .home, .undo{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-radius: 50px;
-    background-image: linear-gradient( 90deg, #eca5e1 0%, #d280dd 100%);
-    width: 65px;
-    height: 65px;
-    font-size: 20px;
-    color: black;
-    transition: all .1s ease-out;
-    cursor: pointer;
-    text-align: center;
-    padding-top:15px;
-    }
-
-  .fa-info, .fa-home, .fa-undo{
-    font-size:30px;
-  }
-
-  /*_______ FOOTER______ */
-  .copyright{
-  
-    width: 100%;
-    background: #356abc;
-    color: #fff;
-    text-align: center;
-    bottom: 0px;
-    padding: 30px 0;
-    font-size: 30px;
-    position: fixed;
-  }
-  
 /* ________MODAL____________*/
 
-.modal-container{
+.modal-container {
   opacity: 0;
   visibility: hidden;
-  position:fixed;
+  position: fixed;
   z-index: 1000;
   width: 100%;
   height: 100vh;
@@ -265,28 +257,46 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.modal{
-  font-family: 'Jura',sans-serif;
-  width: 40%;
-  height: 40%;
-  background-image:radial-gradient(circle at 50% -20.71%, #f4e9c7 0, #efeac7 6.25%, #eaecc8 12.5%, #e5edca 18.75%, #e0eecc 25%, #dbefcf 31.25%, #d6f0d2 37.5%, #d2f1d6 43.75%, #cdf2da 50%, #c9f3de 56.25%, #c5f3e3 62.5%, #c2f3e7 68.75%, #bff3ec 75%, #bdf3f0 81.25%, #bcf3f5 87.5%, #bcf3f9 93.75%, #bcf2fd 100%);
+.modal {
+  font-family: "Jura", sans-serif;
+  font-size: 20px;
+  font-style: bold;
+  width: 50%;
+  height: 50%;
+  background-image: radial-gradient(
+    circle at 50% -20.71%,
+    #f4e9c7 0,
+    #efeac7 6.25%,
+    #eaecc8 12.5%,
+    #e5edca 18.75%,
+    #e0eecc 25%,
+    #dbefcf 31.25%,
+    #d6f0d2 37.5%,
+    #d2f1d6 43.75%,
+    #cdf2da 50%,
+    #c9f3de 56.25%,
+    #c5f3e3 62.5%,
+    #c2f3e7 68.75%,
+    #bff3ec 75%,
+    #bdf3f0 81.25%,
+    #bcf3f5 87.5%,
+    #bcf3f9 93.75%,
+    #bcf2fd 100%
+  );
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   position: relative;
-  transition:transform 1s;
+  transition: transform 1s;
   transform: translateY(0%);
-  /* border-radius: 15px; */
   border: 8px solid transparent;
-  border-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%) 1;
-  
+  border-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%) 1;
 }
 
-.close{
+.close {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -298,16 +308,15 @@ header {
   line-height: 25px;
   cursor: pointer;
   border-radius: 50%;
-  
 }
 
-.modal-close{
- transform: translateY(-200%); 
-} 
+.modal-close {
+  transform: translateY(-200%);
+}
 
 /* BLOQUE DE RESULTADOS */
 
-.result{
+.result {
   display: flex;
   align-items: center;
   padding: 30px;
@@ -317,19 +326,35 @@ header {
   padding: 30px;
 }
 
-.contentResult{
-  font-family: 'Jura',sans-serif;
+.contentResult {
+  font-family: "Jura", sans-serif;
   font-style: bold;
   font-size: 20px;
   border: 8px solid transparent;
-  border-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%) 1;
+  border-image: linear-gradient(90deg, #fad961 0%, #f76b1c 100%) 1;
   width: 50%;
   height: 50%;
-  background-image:radial-gradient(circle at 50% -20.71%, #f4e9c7 0, #efeac7 6.25%, #eaecc8 12.5%, #e5edca 18.75%, #e0eecc 25%, #dbefcf 31.25%, #d6f0d2 37.5%, #d2f1d6 43.75%, #cdf2da 50%, #c9f3de 56.25%, #c5f3e3 62.5%, #c2f3e7 68.75%, #bff3ec 75%, #bdf3f0 81.25%, #bcf3f5 87.5%, #bcf3f9 93.75%, #bcf2fd 100%);
-
-
+  background-image: radial-gradient(
+    circle at 50% -20.71%,
+    #f4e9c7 0,
+    #efeac7 6.25%,
+    #eaecc8 12.5%,
+    #e5edca 18.75%,
+    #e0eecc 25%,
+    #dbefcf 31.25%,
+    #d6f0d2 37.5%,
+    #d2f1d6 43.75%,
+    #cdf2da 50%,
+    #c9f3de 56.25%,
+    #c5f3e3 62.5%,
+    #c2f3e7 68.75%,
+    #bff3ec 75%,
+    #bdf3f0 81.25%,
+    #bcf3f5 87.5%,
+    #bcf3f9 93.75%,
+    #bcf2fd 100%
+  );
 }
-
 
 /* _________________________ responsive ______________________________ */
 
@@ -337,24 +362,76 @@ header {
 
 
 @media only screen and (max-width: 430px) {
-  .logoPrincipal {
-   width: 100%;
-   
+
+   body {
+
+    background-repeat: repeat;
+  
   }
 
+  /* primera interfaz */
+  .logoPrincipal {
+    width: 100%;
+  }
   .button-play,
-.help {
- max-width: 200px;
- font-size: 20px;
+  .help {
+    max-width: 200px;
+    font-size: 20px;
+  }
+
+  .copyright {
+    display: none;
+  }
+
+  .imgIvysaur,
+  .imgPicachu {
+    display: none;
+  }
+
+/* modal */
+  .modal {
+    width: 60%;
+    height: 60%;
+  }
+  .textHelp {
+    font-size: small;
+  }
+
+  .pokeModal {
+    width: 50%;
+    height: 50%;
+  }
+
+/* segunda interfaz */
+
+.information{
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 30px;
 }
 
-  .copyright{
-    display: none;
-  }
+/* Resultados */
+
+.contentResult{
+  width: 100%;
+  height: 100%;
+
+}
+.textResult {
+  font-size: 25px;
+
+}
+.textH2 {
+  font-size:20px;
+}
+.tresPoke {
+  width: 70%;
+  height: 70%;
+}
+
+}
 
 
-.imgIvysaur,  .imgPicachu{
-    display: none;
-  }
-} 
-  
+
+

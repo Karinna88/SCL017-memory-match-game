@@ -4,16 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Match</title>
-    <link rel ="stylesheet"href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-      crossorigin="anonymous" />
+      crossorigin="anonymous"
+    />
 
     <!--Link tipografia Pokemon -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/6826bddc46.js"crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/6826bddc46.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -29,7 +38,12 @@
 
         <div class="initiaContainer">
           <div class="box">
-            <img id="imgPicachu" class="imgPicachu" src="./assets/images/picaSinFondo.png" alt="picachu" />
+            <img
+              id="imgPicachu"
+              class="imgPicachu"
+              src="./assets/images/picaSinFondo.png"
+              alt="picachu"
+            />
           </div>
 
           <main class="box button">
@@ -38,24 +52,33 @@
           </main>
 
           <div class="box">
-            <img id="imgIvysaur" class="imgIvysaur" src="./assets/images/removebg-preview.png"alt="Ivysaur"/>
+            <img
+              id="imgIvysaur"
+              class="imgIvysaur"
+              src="./assets/images/removebg-preview.png"
+              alt="Ivysaur"
+            />
           </div>
         </div>
       </div>
 
       <!-- BLOQUE DE RESULTADOS -->
       <div id="result" class="result" style="display: none">
-       <div style="display: flex;justify-content: center;">
-            <div class="contentResult">
-              <h1>¡Felicidades Ganaste!</h1>
-              <h2>Hiciste <span id="cantidadMov"></span> Movimientos</h2>
-              <h2>En <span id="cantidadTime"> Tiempo  </span></h2>
-              <img src="./assets/images/trespoke.png" alt="trespoke">
-            </div>
+        <div style="display: flex; justify-content: center">
+          <div class="contentResult">
+            <h1 class="textResult">¡Felicidades Ganaste!</h1>
+            <h2 class="textH2">
+              Hiciste <span id="cantidadMov"></span> Movimientos
+            </h2>
+            <h2 class="textH2">En <span id="cantidadTime"> Tiempo </span></h2>
+            <img
+              class="tresPoke"
+              src="./assets/images/trespoke.png"
+              alt="trespoke"
+            />
+          </div>
+        </div>
       </div>
-      </div> 
-
-
 
       <div id="blockThree" class="block-Three">
         <div class="information-botton">
@@ -63,45 +86,62 @@
             <i class="fas fa-info"></i>
           </span>
 
-          <span id="home" class="home">
-            <i class="fas fa-home"></i>
-          </span>
+          <div class="iconHome">
+            <span id="home" class="home">
+              <i class="fas fa-home"></i>
+            </span>
+          </div>
 
           <span id="undo" class="undo">
             <i class="fas fa-undo"></i>
           </span>
         </div>
       </div>
-
-      <!-- Footer -->
-      <footer class="copyright">
-        <i class="far fa-star" aria-hidden="true"></i> © 2021 - Hiliana Angulo -
-        Karinna Sepúlveda <i class="far fa-star" aria-hidden="true"></i>
-      </footer>
     </div>
+    <!-- Footer -->
+    <footer class="copyright">
+      <i class="far fa-star" aria-hidden="true"></i> © 2021 - Hiliana Angulo -
+      Karinna Sepúlveda <i class="far fa-star" aria-hidden="true"></i>
+    </footer>
+    <!----------------- VENTANA MODAL ------------------------------------------->
 
-
-     <!----------------- VENTANA MODAL ------------------------------------------->
-
-     <div class="modal-container">
+    <div class="modal-container">
       <div class="modal modal-close">
         <p class="close">X</p>
 
         <div class="contentModal">
           <div class="pokerosado">
-            <img src="./assets/images/pokeAzul.png" alt="pokeAzul" />
+            <img
+              class="pokeModal"
+              src="./assets/images/pokeAzul.png"
+              alt="pokeAzul"
+            />
           </div>
           <div>
             <span>
-              <b> Voltea una carta e intenta encontrar su pareja para hacer match.</b>
-              <b> En cada tirada se destapan un par de piezas que se vuelven a esconder si no hacen par.</b>
-              <b> La partida terminará cuando estén todas las parejas de cartas encontradas.</b>
+              <p class="textHelp">
+                <b
+                  >- Voltea una carta e intenta encontrar su pareja para hacer
+                  match.</b
+                >
+              </p>
+              <p class="textHelp">
+                <b
+                  >- En cada tirada se destapan un par de cartas que se vuelven
+                  a esconder si no hacen par.</b
+                >
+              </p>
+              <p class="textHelp">
+                <b
+                  >- La partida terminará cuando estén todas las parejas de
+                  cartas encontradas.</b
+                >
+              </p>
             </span>
           </div>
         </div>
       </div>
     </div>
-
 
     <script src="main.js" type="module"></script>
   </body>

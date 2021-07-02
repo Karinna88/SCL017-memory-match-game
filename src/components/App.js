@@ -188,8 +188,8 @@ const App = () => {
              // efectoMatch(cardOne, setOfCards);
               efectoMatch2(cardOne);
     
-
-              if (cardFound == (pokemonList.length)/2) {
+//(pokemonList.length)/2
+              if (cardFound == 1) {
                 clearInterval(time);
                
                //Bloque Resultados*****
