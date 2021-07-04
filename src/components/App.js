@@ -56,11 +56,11 @@ const App = () => {
   blockTwo.id = "blockTwo";
 
   //------Barra de información--------------------//
-
-  //-------Información de tiempo------------------//
   let information = document.createElement("div");
   information.className = "information";
 
+  //-------Información de tiempo------------------//
+  
   let divTime = document.createElement("div");
   divTime.className = "divTime";
   let iconTime = document.createElement("span");
@@ -105,7 +105,7 @@ const App = () => {
   divMoving.appendChild(infMoving);
   information.appendChild(divMoving);
 
-  //----------------Se añade barra de información a página de juego----------//
+  //--- Se añade barra de información a página de juego----------//
   blockTwo.appendChild(information);
 
   //----------------Tablero de juego------------------------//
@@ -120,7 +120,6 @@ const App = () => {
   let cardMovement = 0;
   let time;
   let seconds = 0;
-  // let minutes = 0;
   let primeraCartaVolteada = true; //nueva linea
 
   //-----------------Función contadora de tiempo-----------------------------
@@ -138,30 +137,33 @@ const App = () => {
     card.id = pokemonList[i].id;
     card.className = "card" +" "  + card.id;
     let imgFront = document.createElement("img");
-    imgFront.id = pokemonList[i].id;
+   
     imgFront.src = "./assets/images/ball.jpg";
     imgFront.className = "img-front" +" img_"   + card.id;
     card.appendChild(imgFront);
 
+
+    
     //Para mostrar los nombres de los pokemones provisoriamente************
     let span = document.createElement("span");
     span.innerHTML=card.id
     card.appendChild(span);
 
-   
-    let imgBack = document.createElement("img"); //
+   //_______________________________________________
+    let imgBack = document.createElement("img"); 
     card.appendChild(imgBack);
     
-    imgFront.addEventListener("click", (e) => {
+    imgFront.addEventListener("click", () => {
       if (primeraCartaVolteada == true) {
         timer();
       }
       primeraCartaVolteada = false;
       card.removeChild(imgBack);
-      let carN = e.target;
-      let imagenId = carN.getAttribute("id");
+      
+      let imagenId = card.getAttribute("id");
+                  
       let image = pokemonList[i].image;
-      //let imgBack = document.createElement("img");
+      
       imgBack.id = imagenId;
       imgBack.setAttribute("class", "img-back");
       imgBack.setAttribute("src", image);
@@ -170,11 +172,11 @@ const App = () => {
       if (flippedCards < 2) {
         if (flippedCards == 0) {
           cardOne = imagenId;
-          //IMAGEN.push(imgBack);
+         
         }
         if (flippedCards == 1) {
           cardTwo = imagenId;
-          //IMAGEN.push(imgBack);
+          
         }
         card.style.transform = "rotateY(180deg)";
         flippedCards = flippedCards + 1;
@@ -185,10 +187,10 @@ const App = () => {
             if (cardOne == cardTwo) {
               cardFound = cardFound + 1;
               document.getElementById("infoCheck").innerHTML = "Encontradas:" + cardFound;
-             // efectoMatch(cardOne, setOfCards);
+            
               efectoMatch2(cardOne);
     
-//(pokemonList.length)/2
+
               if (cardFound == 1) {
                 clearInterval(time);
                
@@ -199,6 +201,7 @@ const App = () => {
                document.getElementById("cantidadTime").innerHTML= secondsToHms(seconds);
               }
             }
+
            let setOfCards = document.getElementsByClassName("card");
             for (let element of setOfCards) {
               element.style.transform = "";
@@ -212,7 +215,7 @@ const App = () => {
     gameBoard.appendChild(card);
   }
 
-  blockTwo.appendChild(gameBoard); //estaba
+  blockTwo.appendChild(gameBoard); 
 
   return blockTwo;
 };

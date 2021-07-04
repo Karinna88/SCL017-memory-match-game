@@ -96,7 +96,7 @@ header {
 
 .game-Board {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1200px;
   height: auto;
   display: flex;
   flex-direction: row;
@@ -219,6 +219,7 @@ header {
   padding-top: 15px;
 }
 
+/* Iconos */
 .fa-info,
 .fa-home,
 .fa-undo {
@@ -368,6 +369,9 @@ header {
     background-repeat: repeat;
   
   }
+  .container{
+    width: 100%;
+  }
 
   /* primera interfaz */
   .logoPrincipal {
@@ -390,11 +394,12 @@ header {
 
 /* modal */
   .modal {
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: 80%;
   }
   .textHelp {
     font-size: small;
+    padding: 5px;
   }
 
   .pokeModal {

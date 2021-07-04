@@ -2,9 +2,7 @@ import objeto from "./components/App.js";
 
 document.getElementById("buttonPlay").addEventListener("click", () => {
 
-  document
-    .getElementById("container")
-    .replaceChild(objeto.App(), document.getElementById("blockOne"));
+document.getElementById("container").replaceChild(objeto.App(), document.getElementById("blockOne"));
   document.getElementById("blockThree").style.display = "block";
 });
 
