@@ -79,9 +79,11 @@ Se desarrollaron los prototipos de baja fidelidad, considerando las necesidades 
 <img src=src\assets\images\vista2.jpg>
 
 ### Prototipo de alta fidelidad:
-Luego creamos el prototipo de alta fidelidad, el cual representa nuestro diseño ideal de la solución, incluyendo más opciones para el usuario. Aquí la visualización del prototipo:
+Luego creamos el prototipo de alta fidelidad, el cual representa nuestro diseño ideal de la solución, incluyendo más opciones para el usuario. Aquí la visualización del prototipo de alta fidelidad inicial:
 
-<img src=src\assets\images\prototipo>
+<img src=src\assets\images\prototipoAltaVista1.jpg>
+<img src=src\assets\images\prototipoAltaVista2.jpg>
+
 
 
 
