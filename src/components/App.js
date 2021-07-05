@@ -97,7 +97,7 @@ const App = () => {
   iconMoving.className = "fas fa-magic";
   let infMoving = document.createElement("span");
   infMoving.className = "infMoving";
-  infMoving.id = "infoMoving"; //
+  infMoving.id = "infoMoving"; 
   let textMoving = document.createTextNode("Movimientos:0");
   infMoving.appendChild(textMoving);
 
@@ -120,7 +120,7 @@ const App = () => {
   let cardMovement = 0;
   let time;
   let seconds = 0;
-  let primeraCartaVolteada = true; //nueva linea
+  let primeraCartaVolteada = true; 
 
   //-----------------Función contadora de tiempo-----------------------------
   function timer() {
