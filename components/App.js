@@ -191,7 +191,7 @@ const App = () => {
               efectoMatch2(cardOne);
     
 
-              if (cardFound == 1) {
+              if (cardFound == 9) {
                 clearInterval(time);
                
                //Bloque Resultados*****
