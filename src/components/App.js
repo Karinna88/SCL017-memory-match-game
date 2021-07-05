@@ -126,30 +126,31 @@ const App = () => {
   function timer() {
     time = setInterval(function () {
       document.getElementById("infoTime").innerHTML =  secondsToHms( seconds++);
-    }, 1000);
+    }, 1000);// duración del intervalo de tiempo entre cada ejecución
   }
 
   //--------------------------------------------------------------------------
 
-  pokemonList = shuffle(pokemonList); //----Evaluando la función Shuffle en pokemonList
+  pokemonList = shuffle(pokemonList); 
   for (let i = 0; i < pokemonList.length; i++) {
-    let card = document.createElement("div");
+
+    let card = document.createElement("div"); // se esta creando el contenedor de la img
     card.id = pokemonList[i].id;
-    card.className = "card" +" "  + card.id;
+    card.className = "card" +" "  + card.id;  //se contatena el nombre del pokémon (card + espacio + venusaur)
+    
+    //se esta creando la imagen de ball
     let imgFront = document.createElement("img");
-   
     imgFront.src = "./assets/images/ball.jpg";
     imgFront.className = "img-front" +" img_"   + card.id;
-    card.appendChild(imgFront);
+    card.appendChild(imgFront); //
 
 
-    
     //Para mostrar los nombres de los pokemones provisoriamente************
     let span = document.createElement("span");
     span.innerHTML=card.id
     card.appendChild(span);
 
-   //_______________________________________________
+   //_________________________________________________________________________________
     let imgBack = document.createElement("img"); 
     card.appendChild(imgBack);
     
@@ -157,12 +158,13 @@ const App = () => {
       if (primeraCartaVolteada == true) {
         timer();
       }
-      primeraCartaVolteada = false;
+      primeraCartaVolteada = false; // para que no reinicie el tiempo
+
       card.removeChild(imgBack);
       
       let imagenId = card.getAttribute("id");
                   
-      let image = pokemonList[i].image;
+      let image = pokemonList[i].image;// almacena la img del item
       
       imgBack.id = imagenId;
       imgBack.setAttribute("class", "img-back");
@@ -171,7 +173,7 @@ const App = () => {
 
       if (flippedCards < 2) {
         if (flippedCards == 0) {
-          cardOne = imagenId;
+          cardOne = imagenId; // se le asigna el id de la carta que se esta clikeando
          
         }
         if (flippedCards == 1) {
@@ -181,8 +183,10 @@ const App = () => {
         card.style.transform = "rotateY(180deg)";
         flippedCards = flippedCards + 1;
         if (flippedCards == 2) {
-          cardMovement++; //===cardMovement=cardMovement+1;
+          cardMovement++; //siempre aumenta en 1 cuando ya hay 2 cartas abiertas
           document.getElementById("infoMoving").innerHTML =  "Movimientos:" + cardMovement;
+
+          // setTimeout, para que match dure un seg.
           setTimeout(() => {
             if (cardOne == cardTwo) {
               cardFound = cardFound + 1;
@@ -191,7 +195,7 @@ const App = () => {
               efectoMatch2(cardOne);
     
 
-              if (cardFound == 1) {
+              if (cardFound == 3) {
                 clearInterval(time);
                
                //Bloque Resultados*****
@@ -201,7 +205,7 @@ const App = () => {
                document.getElementById("cantidadTime").innerHTML= secondsToHms(seconds);
               }
             }
-
+          // para que se tapen las cartas si no haces Match
            let setOfCards = document.getElementsByClassName("card");
             for (let element of setOfCards) {
               element.style.transform = "";

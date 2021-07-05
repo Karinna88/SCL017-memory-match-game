@@ -7,7 +7,7 @@ document.getElementById("container").replaceChild(objeto.App(), document.getElem
 });
 
 document.getElementById("home").addEventListener("click", () => {
-  location.reload();
+  location.reload(); // para recargar la página
 });
 
 document.getElementById("undo").addEventListener("click", () => {
@@ -39,6 +39,8 @@ cerrar.addEventListener("click", function () {
   }, 900);
 });
 
+
+// para que lo puedas cerrar en cualquiera parte del Modal
 window.addEventListener("click", function (e) {
   if (e.target == modalC) {
     modal.classList.toggle("modal-close");

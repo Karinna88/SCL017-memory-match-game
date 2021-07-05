@@ -3,6 +3,7 @@
 Developers: Hiliana Angulo- Karinna Sepúlveda
 
 _La interfaz de la aplicación será desplegada usando GitHub Pages._
+ (https://karinna88.github.io/SCL017-memory-match-game/)
 
 <img src=src\assets\images\Interfaz_de_bienvenidaREADME.png >
 
@@ -80,9 +81,8 @@ Se desarrollaron los prototipos de baja fidelidad, considerando las necesidades 
 ### Prototipo de alta fidelidad:
 Luego creamos el prototipo de alta fidelidad, el cual representa nuestro diseño ideal de la solución, incluyendo más opciones para el usuario. Aquí la visualización del prototipo:
 
-(FOTOS)
+<img src=src\assets\images\prototipo>
 
-## Testeo de usabilidad:
-Con nuestro testeo notamos que ciertos aspectos del prototipo no calzaban... (principios de diseño/ HU, entre otras)
+
 
 
